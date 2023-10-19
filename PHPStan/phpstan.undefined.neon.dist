@@ -1,0 +1,81 @@
+includes:
+#	- /home/jo_franz/repositories/ext/phpstan-baseline-undefined.neon
+#	- /home/jo_franz/repositories/ext_broken_maybe_used/phpstan-baseline.neon
+
+parameters:
+	paths:
+		- api
+		- Civi
+		- CRM
+		- services
+		- vendor
+		#- tests
+	excludePaths:
+		analyse:
+			- CRM/*
+			- tools
+			- */tests/*
+			- */vendor/*
+			- */packages/*
+			- */opis-json-schema-ext/*
+			- */funding/Civi/*
+	scanFiles:
+		#- *.php
+	scanDirectories:
+		- /home/jo_franz/repositories/civicrm-core
+		- /home/jo_franz/repositories/ext
+		- /home/jo_franz/repositories/drupal_modules
+		- /var/www/civicrm_env/alle/drupal # Drupal 9
+		- /var/www/civicrm_env/firstd10/drupal # Drupal 10
+		- /home/jo_franz/repositories/ext/action-provider
+	bootstrapFiles:
+	level: 1
+	phpVersion: 80100
+	checkTooWideReturnTypesInProtectedAndPublicMethods: false
+	checkUninitializedProperties: false
+	checkMissingCallableSignature: false
+	treatPhpDocTypesAsCertain: false
+	reportUnmatchedIgnoredErrors: false
+	exceptions:
+		check:
+			missingCheckedExceptionInThrows: false
+			tooWideThrowType: false
+		checkedExceptionClasses:
+#			- \Webmozart\Assert\InvalidArgumentException
+		implicitThrows: false
+	ignoreErrors:
+		- '#Call to an undefined method [a-zA-Z0-9\\_]+::doFoo\(\)#'
+		- '#Unsafe usage of new static#'
+		- '#Call to deprecated method#' # can be switched on
+		- '#Access to an undefined [a-zA-Z0-9\\_]+ property#'
+		- '#always exists and is not falsy#'
+		- '#always exists and is always falsy.#'
+		- '#Variable \$[a-zA-Z0-9\\_]+ in [a-zA-Z0-9\\_\(\)]+ is never defined#'
+		- '#on an unknown class DB#'
+		- '#Function Exception not found.#'
+		- '#Call to static method instance#'
+		- '#invoked with [a-zA-Z0-9\\_]+ parameters, [a-zA-Z0-9\\_]+ required.#'
+		- '#Access to an undefined property#'
+		- '#Access to deprecated static property#'
+		- '#CiviCRM_API3_Exception#'
+		- '#CRM_Exception#'
+		- '#is not an exception#'
+		- '#API\_Exception#'
+		- '#Non-abstract class #'
+		- '#Array has [a-zA-Z0-9\\_]+ duplicate#'
+		- '#Constant [a-zA-Z0-9\\_]+ not found.#'
+		- '#but misses parameter#'
+		- '#but return statement is missing#'
+		- '#is not covariant with tentative return type void of method#'
+		- '#Call to deprecated function#'
+		- '#Undefined variable#' # could be switched on
+		- '#referenced with incorrect case#' # could be switched on
+		- '#might not be defined#'
+		- '#CRM_[a-zA-Z0-9\\_\(\)]+::addElement#'
+		- '#CRM_[a-zA-Z0-9\\_\(\)]+::exportValues#'
+		- '#but misses parameter#'
+		- '#xxxxxxxxxxxxxxxxxx#'
+		- '#overrides static method#'
+		- '#contains abstract method#'
+		- '#Call to deprecated method debug#'
+	tmpDir: .phpstan/undefined
