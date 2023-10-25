@@ -8,3 +8,7 @@ You can find config of different code scanners in separate folders.
 ## Scanning for known removed core methods
 
 https://github.com/systopia/legacycode
+
+
+## Similar projects
+https://github.com/braders/civicrm-phpstan
