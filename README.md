@@ -11,4 +11,4 @@ https://github.com/systopia/legacycode
 
 
 ## Similar projects
-https://github.com/braders/civicrm-phpstan
+- https://github.com/braders/civicrm-phpstan (PHPStan)
