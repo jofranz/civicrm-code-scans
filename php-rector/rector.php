@@ -27,7 +27,8 @@ return RectorConfig::configure()
         Rector\TypeDeclaration\Rector\ClassMethod\BoolReturnTypeFromStrictScalarReturnsRector::class,
         Rector\DeadCode\Rector\Foreach_\RemoveUnusedForeachKeyRector::class,
         Rector\Php73\Rector\FuncCall\JsonThrowOnErrorRector::class,
-        Rector\Php71\Rector\List_\ListToArrayDestructRector::class
+        Rector\Php71\Rector\List_\ListToArrayDestructRector::class,
+        Rector\Php53\Rector\Ternary\TernaryToElvisRector::class,
     ])
     ->withPhpVersion(PhpVersion::PHP_74)
     ->withSets([
