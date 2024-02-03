@@ -1,5 +1,5 @@
 includes:
-#	- /home/jo_franz/repositories/ext/phpstan-baseline-undefined.neon
+	- /home/jo_franz/repositories/ext/phpstan-baseline-undefined.neon
 #	- /home/jo_franz/repositories/ext_broken_maybe_used/phpstan-baseline.neon
 
 parameters:
@@ -30,7 +30,7 @@ parameters:
 		- /home/jo_franz/repositories/ext/action-provider
 	bootstrapFiles:
 	level: 1
-	phpVersion: 80100
+	phpVersion: 80300
 	checkTooWideReturnTypesInProtectedAndPublicMethods: false
 	checkUninitializedProperties: false
 	checkMissingCallableSignature: false
@@ -78,4 +78,4 @@ parameters:
 		- '#overrides static method#'
 		- '#contains abstract method#'
 		- '#Call to deprecated method debug#'
-	tmpDir: .phpstan/undefined
+	tmpDir: ~/.cache/phpstan/undefined # create a cache folder wherever you like
