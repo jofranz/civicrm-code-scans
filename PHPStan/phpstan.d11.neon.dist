@@ -29,6 +29,7 @@ parameters:
 		- /home/jo_franz/repositories/drupal_modules
 #		- /var/www/civicrm_env/alle/drupal # Drupal 9
 		- /home/jo_franz/repositories/scans/scan-assets/civicrm-asset-plugin
+		- /home/jo_franz/repositories/scans/scan-assets/civicrm-packages
 #		- /var/www/civicrm_env/firstd10/drupal # Drupal 10
 		- /home/jo_franz/repositories/d11 # Drupal 11
 		- /home/jo_franz/repositories/ext/action-provider
