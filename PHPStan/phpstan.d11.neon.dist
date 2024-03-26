@@ -1,6 +1,7 @@
 includes:
 #	- /home/jo_franz/repositories/ext/phpstan-baseline-general.neon
 #	- /home/jo_franz/repositories/ext_broken_maybe_used/phpstan-baseline.neon
+#	- /home/jo_franz/repositories/ext/phpstan-baseline-d11.neon
 	- /home/jo_franz/.config/composer/vendor/phpstan/phpstan-deprecation-rules/rules.neon # see: https://github.com/phpstan/phpstan-deprecation-rules
 
 
